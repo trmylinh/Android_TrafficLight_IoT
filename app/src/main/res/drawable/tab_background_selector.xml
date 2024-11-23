@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:state_selected="true">
+        <shape>
+            <solid android:color="@color/white" />
+
+            <!-- Đường viền -->
+            <stroke
+                android:width="3dp"
+                android:color="@color/tab_btn_background" />
+            <corners android:radius="@dimen/_5sdp" />
+        </shape>
+    </item>
+    <item>
+        <shape>
+            <solid android:color="@color/tab_btn_background" />
+            <stroke
+                android:width="3dp"
+                android:color="@color/tab_btn_background" />
+            <corners android:radius="@dimen/_5sdp" />
+        </shape>
+    </item>
+</selector>
+

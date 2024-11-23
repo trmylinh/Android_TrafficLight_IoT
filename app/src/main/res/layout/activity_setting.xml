@@ -1,0 +1,573 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    android:id="@+id/main"
+    tools:context=".SettingActivity">
+
+    <!-- Header -->
+    <TextView
+        android:id="@+id/header_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="@dimen/_30sdp"
+        android:layout_marginTop="@dimen/_2sdp"
+        android:text="M010124-001"
+        android:textColor="#FF0000"
+        android:textSize="@dimen/_10sdp"
+        android:textStyle="bold" />
+
+    <!-- Settings Icon -->
+    <ImageView
+        android:id="@+id/settings_icon"
+        android:layout_width="@dimen/_20sdp"
+        android:layout_height="@dimen/_20sdp"
+        android:layout_alignParentTop="true"
+        android:background="@drawable/btn_setting"
+        android:contentDescription="Settings Icon" />
+
+    <!-- TabLayout -->
+    <com.google.android.material.tabs.TabLayout
+        android:id="@+id/button_group"
+        android:layout_width="@dimen/_350sdp"
+        android:layout_height="@dimen/_20sdp"
+        android:layout_below="@id/header_text"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:background="#F0F0F0"
+        android:elevation="@dimen/_4sdp"
+        app:tabBackground="@drawable/tab_background_selector"
+        app:tabGravity="fill"
+        app:tabIndicatorColor="@android:color/transparent"
+        app:tabIndicatorHeight="0dp"
+        app:tabMode="fixed"
+        app:tabRippleColor="@android:color/transparent"
+        app:tabSelectedTextColor="@color/tab_btn_background"
+        app:tabTextAppearance="@style/CustomTabTextStyle"
+        app:tabTextColor="@color/white">
+
+        <!-- Tab Master -->
+        <com.google.android.material.tabs.TabItem
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="MASTER" />
+
+        <!-- Tab +1 SLAVE -->
+        <com.google.android.material.tabs.TabItem
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="+ 1 SLAVE" />
+
+        <!-- Tab +2 SLAVE -->
+        <com.google.android.material.tabs.TabItem
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="+ 2 SLAVE" />
+
+        <!-- Tab +3 SLAVE -->
+        <com.google.android.material.tabs.TabItem
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="+ 3 SLAVE" />
+    </com.google.android.material.tabs.TabLayout>
+
+    <!-- Slave Layout -->
+    <LinearLayout
+        android:id="@+id/slave_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/button_group"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:gravity="center"
+        android:layout_centerHorizontal="true"
+        android:orientation="horizontal"
+        android:paddingHorizontal="@dimen/_16sdp">
+
+        <!-- Slave 1 -->
+        <LinearLayout
+            android:layout_width="@dimen/_120sdp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/_8sdp"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/slave1_icon"
+                android:layout_width="@dimen/_100sdp"
+                android:layout_height="@dimen/_40sdp"
+                android:background="@drawable/traffic_light_rotate_disable"
+                android:contentDescription="Slave 1 Icon" />
+
+            <TextView
+                android:id="@+id/slave1_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Slave 1"
+                android:textStyle="bold"
+                android:textColor="@color/dark_text"
+                android:textSize="@dimen/_10sdp" />
+
+            <LinearLayout
+                android:id="@+id/slave1_sn_layout"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/layout_border_disconnect"
+                android:divider="@drawable/divider_line_disconnect"
+                android:dividerPadding="0dp"
+                android:orientation="horizontal"
+                android:padding="@dimen/_2sdp"
+                android:showDividers="middle">
+
+                <!-- Phần Text (SN) -->
+                <TextView
+                    android:id="@+id/slave1_sn"
+                    android:layout_width="@dimen/_40sdp"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:padding="@dimen/_5sdp"
+                    android:text="SN"
+                    android:textColor="@color/dark_text"
+                    android:textSize="@dimen/_8sdp"
+                    android:textStyle="bold" />
+
+                <!-- Phần EditText -->
+                <EditText
+                    android:id="@+id/edt_slave1_sn"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@null"
+                    android:gravity="center_vertical"
+                    android:inputType="text"
+                    android:enabled="false"
+                    android:padding="@dimen/_5sdp"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/_8sdp" />
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/slave1_name_layout"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/layout_border_disconnect"
+                android:divider="@drawable/divider_line_disconnect"
+                android:dividerPadding="0dp"
+                android:orientation="horizontal"
+                android:padding="@dimen/_2sdp"
+                android:showDividers="middle">
+
+                <!-- Phần Text (SN) -->
+                <TextView
+                    android:id="@+id/slave1_name"
+                    android:layout_width="@dimen/_40sdp"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:padding="@dimen/_5sdp"
+                    android:text="NAME"
+                    android:textColor="@color/dark_text"
+                    android:textSize="@dimen/_8sdp"
+                    android:textStyle="bold" />
+
+                <!-- Phần EditText -->
+                <EditText
+                    android:id="@+id/edt_slave1_name"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@null"
+                    android:gravity="center_vertical"
+                    android:inputType="text"
+                    android:enabled="false"
+                    android:padding="@dimen/_5sdp"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/_8sdp"/>
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/slave1_group_layout"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/layout_border_disconnect"
+                android:divider="@drawable/divider_line_disconnect"
+                android:dividerPadding="0dp"
+                android:orientation="horizontal"
+                android:padding="@dimen/_2sdp"
+                android:showDividers="middle">
+
+                <!-- Phần Text (SN) -->
+                <TextView
+                    android:id="@+id/slave1_group"
+                    android:layout_width="@dimen/_40sdp"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:padding="@dimen/_5sdp"
+                    android:text="GROUP"
+                    android:textColor="@color/dark_text"
+                    android:textSize="@dimen/_8sdp"
+                    android:textStyle="bold" />
+
+                <!-- Phần EditText -->
+                <EditText
+                    android:id="@+id/edt_slave1_group"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@null"
+                    android:gravity="center_vertical"
+                    android:inputType="text"
+                    android:enabled="false"
+                    android:padding="@dimen/_5sdp"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/_8sdp"/>
+            </LinearLayout>
+
+
+            <ImageView
+                android:id="@+id/disconnect_slave1"
+                android:layout_width="@dimen/_25sdp"
+                android:layout_height="@dimen/_25sdp"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:background="@drawable/disconnect"
+                android:contentDescription="Signal Icon" />
+        </LinearLayout>
+
+        <!-- Slave 2 -->
+        <LinearLayout
+            android:layout_width="@dimen/_120sdp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/_8sdp"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/slave2_icon"
+                android:layout_width="@dimen/_100sdp"
+                android:layout_height="@dimen/_40sdp"
+                android:background="@drawable/traffic_light_rotate_disable"
+                android:contentDescription="Slave 2 Icon" />
+
+            <TextView
+                android:id="@+id/slave2_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Slave 2"
+                android:textStyle="bold"
+                android:textColor="@color/dark_text"
+                android:textSize="@dimen/_10sdp" />
+
+            <LinearLayout
+                android:id="@+id/slave2_sn_layout"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/layout_border_disconnect"
+                android:divider="@drawable/divider_line_disconnect"
+                android:dividerPadding="0dp"
+                android:orientation="horizontal"
+                android:padding="@dimen/_2sdp"
+                android:showDividers="middle">
+
+                <!-- Phần Text (SN) -->
+                <TextView
+                    android:id="@+id/slave2_sn"
+                    android:layout_width="@dimen/_40sdp"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:padding="@dimen/_5sdp"
+                    android:text="SN"
+                    android:textColor="@color/dark_text"
+                    android:textSize="@dimen/_8sdp"
+                    android:textStyle="bold" />
+
+                <!-- Phần EditText -->
+                <EditText
+                    android:id="@+id/edt_slave2_sn"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@null"
+                    android:gravity="center_vertical"
+                    android:inputType="text"
+                    android:enabled="false"
+                    android:padding="@dimen/_5sdp"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/_8sdp" />
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/slave2_name_layout"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/layout_border_disconnect"
+                android:divider="@drawable/divider_line_disconnect"
+                android:dividerPadding="0dp"
+                android:orientation="horizontal"
+                android:padding="@dimen/_2sdp"
+                android:showDividers="middle">
+
+                <!-- Phần Text (SN) -->
+                <TextView
+                    android:id="@+id/slave2_name"
+                    android:layout_width="@dimen/_40sdp"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:padding="@dimen/_5sdp"
+                    android:text="NAME"
+                    android:textColor="@color/dark_text"
+                    android:textSize="@dimen/_8sdp"
+                    android:textStyle="bold" />
+
+                <!-- Phần EditText -->
+                <EditText
+                    android:id="@+id/edt_slave2_name"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@null"
+                    android:gravity="center_vertical"
+                    android:inputType="text"
+                    android:enabled="false"
+                    android:padding="@dimen/_5sdp"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/_8sdp"/>
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/slave2_group_layout"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/layout_border_disconnect"
+                android:divider="@drawable/divider_line_disconnect"
+                android:dividerPadding="0dp"
+                android:orientation="horizontal"
+                android:padding="@dimen/_2sdp"
+                android:showDividers="middle">
+
+                <!-- Phần Text (SN) -->
+                <TextView
+                    android:id="@+id/slave2_group"
+                    android:layout_width="@dimen/_40sdp"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:padding="@dimen/_5sdp"
+                    android:text="GROUP"
+                    android:textColor="@color/dark_text"
+                    android:textSize="@dimen/_8sdp"
+                    android:textStyle="bold" />
+
+                <!-- Phần EditText -->
+                <EditText
+                    android:id="@+id/edt_slave2_group"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@null"
+                    android:gravity="center_vertical"
+                    android:inputType="text"
+                    android:enabled="false"
+                    android:padding="@dimen/_5sdp"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/_8sdp"/>
+            </LinearLayout>
+
+
+            <ImageView
+                android:id="@+id/disconnect_slave2"
+                android:layout_width="@dimen/_25sdp"
+                android:layout_height="@dimen/_25sdp"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:background="@drawable/disconnect"
+                android:contentDescription="Signal Icon" />
+        </LinearLayout>
+
+        <!-- Slave 3 (Disabled State) -->
+        <LinearLayout
+            android:layout_width="@dimen/_120sdp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/_8sdp"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/slave3_icon"
+                android:layout_width="@dimen/_100sdp"
+                android:layout_height="@dimen/_40sdp"
+                android:background="@drawable/traffic_light_rotate_disable"
+                android:contentDescription="Slave 3 Icon" />
+
+            <TextView
+                android:id="@+id/slave3_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Slave 3"
+                android:textColor="@color/dark_text"
+                android:textStyle="bold"
+                android:textSize="@dimen/_10sdp" />
+
+            <LinearLayout
+                android:id="@+id/slave3_sn_layout"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/layout_border_disconnect"
+                android:divider="@drawable/divider_line_disconnect"
+                android:dividerPadding="0dp"
+                android:orientation="horizontal"
+                android:padding="@dimen/_2sdp"
+                android:showDividers="middle">
+
+                <!-- Phần Text (SN) -->
+                <TextView
+                    android:id="@+id/slave3_sn"
+                    android:layout_width="@dimen/_40sdp"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:padding="@dimen/_5sdp"
+                    android:text="SN"
+                    android:textColor="@color/dark_text"
+                    android:textSize="@dimen/_8sdp"
+                    android:textStyle="bold" />
+
+                <!-- Phần EditText -->
+                <EditText
+                    android:id="@+id/edt_slave3_sn"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@null"
+                    android:gravity="center_vertical"
+                    android:inputType="text"
+                    android:enabled="false"
+                    android:padding="@dimen/_5sdp"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/_8sdp" />
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/slave3_name_layout"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/layout_border_disconnect"
+                android:divider="@drawable/divider_line_disconnect"
+                android:dividerPadding="0dp"
+                android:orientation="horizontal"
+                android:padding="@dimen/_2sdp"
+                android:showDividers="middle">
+
+                <!-- Phần Text (SN) -->
+                <TextView
+                    android:id="@+id/slave3_name"
+                    android:layout_width="@dimen/_40sdp"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:padding="@dimen/_5sdp"
+                    android:text="NAME"
+                    android:textColor="@color/dark_text"
+                    android:textSize="@dimen/_8sdp"
+                    android:textStyle="bold" />
+
+                <!-- Phần EditText -->
+                <EditText
+                    android:id="@+id/edt_slave3_name"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@null"
+                    android:gravity="center_vertical"
+                    android:inputType="text"
+                    android:enabled="false"
+                    android:padding="@dimen/_5sdp"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/_8sdp"/>
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/slave3_group_layout"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/layout_border_disconnect"
+                android:divider="@drawable/divider_line_disconnect"
+                android:dividerPadding="0dp"
+                android:orientation="horizontal"
+                android:padding="@dimen/_2sdp"
+                android:showDividers="middle">
+
+                <!-- Phần Text (SN) -->
+                <TextView
+                    android:id="@+id/slave3_group"
+                    android:layout_width="@dimen/_40sdp"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:padding="@dimen/_5sdp"
+                    android:text="GROUP"
+                    android:textColor="@color/dark_text"
+                    android:textSize="@dimen/_8sdp"
+                    android:textStyle="bold" />
+
+                <!-- Phần EditText -->
+                <EditText
+                    android:id="@+id/edt_slave3_group"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@null"
+                    android:gravity="center_vertical"
+                    android:inputType="text"
+                    android:enabled="false"
+                    android:padding="@dimen/_5sdp"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/_8sdp"/>
+            </LinearLayout>
+
+
+            <ImageView
+                android:id="@+id/disconnect_slave3"
+                android:layout_width="@dimen/_25sdp"
+                android:layout_height="@dimen/_25sdp"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:background="@drawable/disconnect"
+                android:contentDescription="Signal Icon" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <!-- Bottom Navigation -->
+    <RelativeLayout
+        android:id="@+id/bottom_navigation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginVertical="@dimen/_5sdp">
+
+        <!-- Home Icon -->
+        <ImageView
+            android:id="@+id/home_icon"
+            android:layout_width="@dimen/_30sdp"
+            android:layout_height="@dimen/_30sdp"
+            android:background="@drawable/btn_home"
+            android:contentDescription="Home Icon" />
+
+        <!-- QR Code Icon -->
+        <ImageView
+            android:id="@+id/qr_code_icon"
+            android:layout_width="@dimen/_25sdp"
+            android:layout_height="@dimen/_25sdp"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/btn_qr"
+            android:contentDescription="QR Code Icon" />
+
+        <!-- Refresh Icon -->
+        <ImageView
+            android:id="@+id/refresh_icon"
+            android:layout_width="@dimen/_28sdp"
+            android:layout_height="@dimen/_28sdp"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="@dimen/_10sdp"
+            android:background="@drawable/btn_rescan"
+            android:contentDescription="Refresh Icon" />
+    </RelativeLayout>
+</RelativeLayout>

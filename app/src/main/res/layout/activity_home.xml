@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    tools:context=".HomeActivity">
+
+    <!-- Đường -->
+    <ImageView
+        android:id="@+id/road"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/_100sdp"
+        android:layout_marginTop="@dimen/_50sdp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/road"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- Đèn giao thông -->
+    <ImageView
+        android:id="@+id/traffic_light"
+        android:layout_width="@dimen/_80sdp"
+        android:layout_height="@dimen/_200sdp"
+        android:src="@drawable/traffic_light"
+        app:layout_constraintTop_toTopOf="@id/road"
+        app:layout_constraintBottom_toBottomOf="@id/road"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- Nút QR -->
+    <ImageView
+        android:id="@+id/qr_button"
+        android:layout_width="@dimen/_80sdp"
+        android:layout_height="@dimen/_80sdp"
+        android:src="@drawable/btn_qr"
+        app:layout_constraintTop_toBottomOf="@id/road"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/seri_button"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_chainStyle="spread" />
+
+    <!-- Nút Seri Num -->
+    <ImageView
+        android:id="@+id/seri_button"
+        android:layout_width="@dimen/_80sdp"
+        android:layout_height="@dimen/_80sdp"
+        android:src="@drawable/btn_sn"
+        app:layout_constraintTop_toBottomOf="@id/road"
+        app:layout_constraintStart_toEndOf="@id/qr_button"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
