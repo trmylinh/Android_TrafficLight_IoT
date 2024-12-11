@@ -1,238 +1,121 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/background"
-    tools:context=".MainHomeActivity">
-    <!-- Nút Home -->
-    <ImageView
-        android:id="@+id/home_button"
-        android:layout_width="@dimen/_30sdp"
-        android:layout_height="@dimen/_30sdp"
-        android:contentDescription="Home"
-        android:src="@drawable/btn_home"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+    android:background="@color/white"
+    tools:context=".MainMenuActivity">
 
-    <!-- Nút Connection -->
-    <ImageView
-        android:id="@+id/connection_button"
-        android:layout_width="@dimen/_85sdp"
-        android:layout_height="@dimen/_85sdp"
-        android:layout_marginStart="@dimen/_40sdp"
-        android:layout_marginTop="@dimen/_30sdp"
-        android:contentDescription="Connection"
-        android:src="@drawable/btn_connection"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <!-- Text dưới nút Connection -->
-    <TextView
-        android:id="@+id/connection_text"
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_centerInParent="true"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/_5sdp"
-        android:text="CONNECTION"
-        android:textAlignment="center"
-        android:textSize="@dimen/_10sdp"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="@id/connection_button"
-        app:layout_constraintStart_toStartOf="@id/connection_button"
-        app:layout_constraintTop_toBottomOf="@id/connection_button" />
+        android:layout_height="wrap_content">
+        <!-- Nút Connection -->
+        <ImageView
+            android:id="@+id/connection_button"
+            android:layout_width="@dimen/_85sdp"
+            android:layout_height="@dimen/_85sdp"
+            android:contentDescription="Mode"
+            android:src="@drawable/btn_controller"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
-    <!-- Nút Controller -->
-    <ImageView
-        android:id="@+id/controller_button"
-        android:layout_width="@dimen/_85sdp"
-        android:layout_height="@dimen/_85sdp"
-        android:layout_marginStart="@dimen/_40sdp"
-        android:layout_marginTop="@dimen/_30sdp"
-        android:contentDescription="Controller"
-        android:src="@drawable/btn_controller"
-        app:layout_constraintStart_toEndOf="@id/connection_button"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <!-- Text dưới nút Controller -->
-    <TextView
-        android:id="@+id/controller_text"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        android:text="CONTROLLER"
-        android:textAlignment="center"
-        android:textSize="@dimen/_10sdp"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="@id/controller_button"
-        app:layout_constraintStart_toStartOf="@id/controller_button"
-        app:layout_constraintTop_toBottomOf="@id/controller_button" />
-
-    <!-- Nút Setting -->
-    <ImageView
-        android:id="@+id/setting_button"
-        android:layout_width="@dimen/_85sdp"
-        android:layout_height="@dimen/_85sdp"
-        android:layout_marginStart="@dimen/_40sdp"
-        android:layout_marginTop="@dimen/_40sdp"
-        android:contentDescription="Setting"
-        android:src="@drawable/btn_setting"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/connection_button" />
-
-    <!-- Text dưới nút Setting -->
-    <TextView
-        android:id="@+id/setting_text"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        android:text="SETTING"
-        android:textAlignment="center"
-        android:textSize="@dimen/_10sdp"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="@id/setting_button"
-        app:layout_constraintStart_toStartOf="@id/setting_button"
-        app:layout_constraintTop_toBottomOf="@id/setting_button" />
-
-    <!-- Nút Rescan -->
-    <ImageView
-        android:id="@+id/rescan_button"
-        android:layout_width="@dimen/_85sdp"
-        android:layout_height="@dimen/_85sdp"
-        android:layout_marginStart="@dimen/_40sdp"
-        android:layout_marginTop="@dimen/_40sdp"
-        android:contentDescription="Rescan"
-        android:src="@drawable/btn_rescan"
-        app:layout_constraintStart_toEndOf="@id/setting_button"
-        app:layout_constraintTop_toBottomOf="@id/controller_button" />
-
-    <!-- Text dưới nút Rescan -->
-    <TextView
-        android:id="@+id/rescan_text"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        android:text="RESCAN"
-        android:textAlignment="center"
-        android:textSize="@dimen/_10sdp"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="@id/rescan_button"
-        app:layout_constraintStart_toStartOf="@id/rescan_button"
-        app:layout_constraintTop_toBottomOf="@id/rescan_button" />
-
-
-    <!-- Đèn giao thông -->
-    <ImageView
-        android:id="@+id/traffic_light"
-        android:layout_width="@dimen/_80sdp"
-        android:layout_height="@dimen/_200sdp"
-        android:layout_marginTop="@dimen/_10sdp"
-        android:src="@drawable/traffic_light"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.8"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <!-- Thông tin Role, Production date, Serial number -->
-    <LinearLayout
-        android:id="@+id/info_container"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="@dimen/_40sdp"
-        android:orientation="vertical"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.9"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/traffic_light">
-
-        <!-- Dòng Role và Value -->
-        <LinearLayout
-            android:layout_width="match_parent"
+        <!-- Text dưới nút Connection -->
+        <TextView
+            android:id="@+id/connection_text"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:orientation="horizontal">
+            android:layout_marginTop="@dimen/_5sdp"
+            android:text="MODE"
+            android:textAlignment="center"
+            android:textSize="@dimen/_10sdp"
+            android:textColor="@color/black"
+            android:fontFamily="@font/instrument_sans_bold"
+            app:layout_constraintEnd_toEndOf="@id/connection_button"
+            app:layout_constraintStart_toStartOf="@id/connection_button"
+            app:layout_constraintTop_toBottomOf="@id/connection_button" />
 
-            <TextView
-                android:id="@+id/role_text"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:gravity="start"
-                android:text="Role:"
-                android:textColor="#000000"
-                android:textSize="@dimen/_10sdp"
-                android:textStyle="bold"
-                android:layout_marginEnd="@dimen/_5sdp"/>
+        <!-- Nút Controller -->
+        <ImageView
+            android:id="@+id/controller_button"
+            android:layout_width="@dimen/_85sdp"
+            android:layout_height="@dimen/_85sdp"
+            android:layout_marginStart="@dimen/_40sdp"
+            android:contentDescription="Setting"
+            android:src="@drawable/btn_setting"
+            app:layout_constraintStart_toEndOf="@id/connection_button"
+            app:layout_constraintTop_toTopOf="parent" />
 
-            <TextView
-                android:id="@+id/role_value"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:gravity="end"
-                android:text="Master"
-                android:textStyle="bold"
-                android:textColor="#F50057"
-                android:textSize="@dimen/_10sdp"/>
-        </LinearLayout>
-
-        <!-- Dòng Production date và Value -->
-        <LinearLayout
-            android:layout_width="match_parent"
+        <!-- Text dưới nút Controller -->
+        <TextView
+            android:id="@+id/controller_text"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:orientation="horizontal">
+            android:layout_marginTop="8dp"
+            android:text="SETTING"
+            android:textAlignment="center"
+            android:textSize="@dimen/_10sdp"
+            android:textColor="@color/black"
+            android:fontFamily="@font/instrument_sans_bold"
+            app:layout_constraintEnd_toEndOf="@id/controller_button"
+            app:layout_constraintStart_toStartOf="@id/controller_button"
+            app:layout_constraintTop_toBottomOf="@id/controller_button" />
 
-            <TextView
-                android:id="@+id/production_date_text"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:gravity="start"
-                android:text="Production date:"
-                android:textColor="#000000"
-                android:textSize="@dimen/_10sdp"
-                android:textStyle="bold"
-                android:layout_marginEnd="@dimen/_5sdp"/>
+        <!-- Nút Setting -->
+        <ImageView
+            android:id="@+id/setting_button"
+            android:layout_width="@dimen/_85sdp"
+            android:layout_height="@dimen/_85sdp"
+            android:layout_marginTop="@dimen/_40sdp"
+            android:contentDescription="TEST"
+            android:src="@drawable/btn_test"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/connection_button" />
 
-            <TextView
-                android:id="@+id/production_date_value"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:gravity="end"
-                android:text="01-01-2024"
-                android:textColor="#F50057"
-                android:textStyle="bold"
-                android:textSize="@dimen/_10sdp"/>
-        </LinearLayout>
-
-        <!-- Dòng Serial number và Value -->
-        <LinearLayout
-            android:layout_width="match_parent"
+        <!-- Text dưới nút Setting -->
+        <TextView
+            android:id="@+id/setting_text"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:orientation="horizontal">
+            android:layout_marginTop="8dp"
+            android:text="SETTING"
+            android:textAlignment="center"
+            android:textSize="@dimen/_10sdp"
+            android:textColor="@color/black"
+            android:fontFamily="@font/instrument_sans_bold"
+            app:layout_constraintEnd_toEndOf="@id/setting_button"
+            app:layout_constraintStart_toStartOf="@id/setting_button"
+            app:layout_constraintTop_toBottomOf="@id/setting_button" />
 
-            <TextView
-                android:id="@+id/serial_number_text"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:gravity="start"
-                android:text="Serial number:"
-                android:textColor="#000000"
-                android:textSize="@dimen/_10sdp"
-                android:textStyle="bold"
-                android:layout_marginEnd="@dimen/_5sdp"/>
+        <!-- Nút Rescan -->
+        <ImageView
+            android:id="@+id/rescan_button"
+            android:layout_width="@dimen/_85sdp"
+            android:layout_height="@dimen/_85sdp"
+            android:layout_marginStart="@dimen/_40sdp"
+            android:layout_marginTop="@dimen/_40sdp"
+            android:contentDescription="Rescan"
+            android:src="@drawable/btn_faq"
+            app:layout_constraintStart_toEndOf="@id/setting_button"
+            app:layout_constraintTop_toBottomOf="@id/controller_button" />
 
-            <TextView
-                android:id="@+id/serial_number_value"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:gravity="end"
-                android:text="M010124-001"
-                android:textColor="#F50057"
-                android:textStyle="bold"
-                android:textSize="@dimen/_10sdp"/>
-        </LinearLayout>
-    </LinearLayout>
+        <!-- Text dưới nút Rescan -->
+        <TextView
+            android:id="@+id/rescan_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:fontFamily="@font/instrument_sans_bold"
+            android:text="FAQ"
+            android:textAlignment="center"
+            android:textSize="@dimen/_10sdp"
+            app:layout_constraintEnd_toEndOf="@id/rescan_button"
+            app:layout_constraintHorizontal_bias="0.684"
+            app:layout_constraintStart_toStartOf="@id/rescan_button"
+            app:layout_constraintTop_toBottomOf="@id/rescan_button" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+</RelativeLayout>

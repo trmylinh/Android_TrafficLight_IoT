@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:background="@color/white"
+    tools:context=".splash.SplashActivity">
+
+    <ImageView
+        android:src="@drawable/traffic_light"
+        android:layout_width="@dimen/_200sdp"
+        android:layout_height="@dimen/_200sdp"/>
+
+    <TextView
+        android:text="@string/petals"
+        android:textColor="@color/black"
+        android:shadowDx="4"
+        android:shadowDy="8"
+        android:shadowRadius="2"
+        android:shadowColor="#80000000"
+        android:textSize="@dimen/_30sdp"
+        android:fontFamily="@font/instrument_sans_bold"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <TextView
+        android:text="Portable Electronic Traffic Assistance Light System"
+        android:textColor="@color/black"
+        android:textSize="@dimen/_15sdp"
+        android:fontFamily="@font/instrument_sans_medium"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+</LinearLayout>

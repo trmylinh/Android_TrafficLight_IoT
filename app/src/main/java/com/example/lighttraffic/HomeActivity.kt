@@ -46,7 +46,7 @@ class HomeActivity : AppCompatActivity() {
             Toast.makeText(this, "Scan cancelled", Toast.LENGTH_SHORT).show()
         } else {
             val scannedData = result.contents
-            val intent = Intent(this@HomeActivity, MainHomeActivity::class.java)
+            val intent = Intent(this@HomeActivity, MainMenuActivity::class.java)
             intent.putExtra("scannedData", scannedData)
             startActivity(intent)
             finish()
@@ -61,7 +61,7 @@ class HomeActivity : AppCompatActivity() {
             .setPositiveButton("OK") { _, _ ->
                 val input = editText.text.toString()
                 if (input.isNotEmpty()) {
-                    val intent = Intent(this, MainHomeActivity::class.java)
+                    val intent = Intent(this, MainMenuActivity::class.java)
                     intent.putExtra("serialNumber", input)
                     startActivity(intent)
                     finish()

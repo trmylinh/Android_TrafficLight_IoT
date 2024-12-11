@@ -22,9 +22,25 @@
         android:theme="@style/Theme.LightTraffic"
         tools:targetApi="31">
         <activity
+            android:name=".scan.ScanActivity"
+            android:exported="false" />
+        <activity
+            android:name=".mode_selection.ModeSelectionActivity"
+            android:exported="false" />
+        <activity
+            android:name=".splash.SplashActivity"
+            android:exported="true"
+            android:screenOrientation="landscape">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
             android:name=".ControllerActivity"
             android:exported="false"
-            android:screenOrientation="landscape"/>
+            android:screenOrientation="landscape" />
         <activity
             android:name=".MapActivity"
             android:exported="false"
@@ -38,23 +54,17 @@
             android:exported="false"
             android:screenOrientation="landscape" />
         <activity
-            android:name=".MainHomeActivity"
+            android:name=".MainMenuActivity"
             android:exported="false"
             android:screenOrientation="landscape" />
         <activity
             android:name=".HomeActivity"
             android:exported="true"
-            android:screenOrientation="landscape">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
+            android:screenOrientation="landscape" />
         <activity
             android:name=".MainActivity"
             android:exported="true"
-            android:screenOrientation="landscape"/>
+            android:screenOrientation="landscape" />
     </application>
 
 </manifest>
