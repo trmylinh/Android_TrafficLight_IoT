@@ -1,3 +1,2 @@
 🚦**PREVIEW**
-
-![UXUIDEMO-LIGHT drawio](https://github.com/user-attachments/assets/1cded741-dce3-4c26-ba04-b33007558186)
+![Launch Screen](https://github.com/user-attachments/assets/552f4a4d-c217-4b6b-9f23-1fa49bb25829)
